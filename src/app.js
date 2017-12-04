@@ -9,15 +9,17 @@ var template = (
 	</div>
 	);
 
-var userName = 'Bhaskar';
-var userSkill = 'JavaScript';
-var userLocation = 'Pune, India';
+var userData = {
+	name: 'Bhaskar',
+	skill: 'JavaScript',
+	location: 'Pune, India'
+}
 
 var anotherTemplate = (
 	<div>
-	<h1>Name - {userName.toUpperCase() + '!'}</h1>
-	<p>Skill - {userSkill}</p>
-	<p>Location - {userLocation}</p>
+	<h1>Name - {userData.name.toUpperCase() + '!'}</h1>
+	<p>Skill - {userData.skill}</p>
+	<p>Location - {userData.location}</p>
 	</div>
 	);
 
