@@ -1,7 +1,10 @@
 'use strict';
 
 console.log('app.js is running');
-
+var app = {
+	title: 'Decision App',
+	subTitle: 'This is deicision app.'
+};
 var template = React.createElement(
 	'div',
 	null,
@@ -46,7 +49,23 @@ var anotherTemplate = React.createElement(
 	)
 );
 
+var appTemplate = React.createElement(
+	'div',
+	null,
+	React.createElement(
+		'h1',
+		null,
+		app.title
+	),
+	React.createElement(
+		'p',
+		null,
+		app.subTitle
+	)
+);
+
 var appRoot = document.getElementById('app');
 
 // ReactDOM.render(template, appRoot);
-ReactDOM.render(anotherTemplate, appRoot);
+// ReactDOM.render(anotherTemplate, appRoot);
+ReactDOM.render(appTemplate, appRoot);

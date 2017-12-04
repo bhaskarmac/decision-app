@@ -1,7 +1,10 @@
 'use strict';
 
 console.log('app.js is running');
-
+var app = {
+	title: 'Decision App',
+	subTitle: 'This is deicision app.'
+}
 var template = (
 	<div> 
 	<h1>Decision App</h1>
@@ -23,7 +26,15 @@ var anotherTemplate = (
 	</div>
 	);
 
+var appTemplate = (
+	<div>
+		<h1>{app.title}</h1>
+		<p>{app.subTitle}</p>
+	</div>
+	);
+
 var appRoot = document.getElementById('app');
 
 // ReactDOM.render(template, appRoot);
-ReactDOM.render(anotherTemplate, appRoot);
+// ReactDOM.render(anotherTemplate, appRoot);
+ReactDOM.render(appTemplate, appRoot);
