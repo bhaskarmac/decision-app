@@ -18,6 +18,8 @@ var template = React.createElement(
 );
 
 var userName = 'Bhaskar';
+var userSkill = 'JavaScript';
+var userLocation = 'Pune, India';
 
 var anotherTemplate = React.createElement(
 	'div',
@@ -25,17 +27,20 @@ var anotherTemplate = React.createElement(
 	React.createElement(
 		'h1',
 		null,
+		'Name - ',
 		userName.toUpperCase() + '!'
 	),
 	React.createElement(
 		'p',
 		null,
-		'JavaScript'
+		'Skill - ',
+		userSkill
 	),
 	React.createElement(
 		'p',
 		null,
-		'Pune, India'
+		'Location - ',
+		userLocation
 	)
 );
 

@@ -10,12 +10,14 @@ var template = (
 	);
 
 var userName = 'Bhaskar';
+var userSkill = 'JavaScript';
+var userLocation = 'Pune, India';
 
 var anotherTemplate = (
 	<div>
-	<h1>{userName.toUpperCase() + '!'}</h1>
-	<p>JavaScript</p>
-	<p>Pune, India</p>
+	<h1>Name - {userName.toUpperCase() + '!'}</h1>
+	<p>Skill - {userSkill}</p>
+	<p>Location - {userLocation}</p>
 	</div>
 	);
 
