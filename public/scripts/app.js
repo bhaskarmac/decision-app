@@ -16,6 +16,30 @@ var template = React.createElement(
 		'This is some info'
 	)
 );
+
+var userName = 'Bhaskar';
+
+var anotherTemplate = React.createElement(
+	'div',
+	null,
+	React.createElement(
+		'h1',
+		null,
+		userName.toUpperCase() + '!'
+	),
+	React.createElement(
+		'p',
+		null,
+		'JavaScript'
+	),
+	React.createElement(
+		'p',
+		null,
+		'Pune, India'
+	)
+);
+
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+// ReactDOM.render(template, appRoot);
+ReactDOM.render(anotherTemplate, appRoot);
