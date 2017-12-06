@@ -26,6 +26,14 @@ var userData = {
 	location: 'Pune, India'
 };
 
+function getLocation(location) {
+	if (location) {
+		return location;
+	} else {
+		return 'Unknown';
+	}
+}
+
 var anotherTemplate = React.createElement(
 	'div',
 	null,
@@ -45,7 +53,7 @@ var anotherTemplate = React.createElement(
 		'p',
 		null,
 		'Location - ',
-		userData.location
+		getLocation(userData.location)
 	)
 );
 
@@ -67,5 +75,5 @@ var appTemplate = React.createElement(
 var appRoot = document.getElementById('app');
 
 // ReactDOM.render(template, appRoot);
-// ReactDOM.render(anotherTemplate, appRoot);
-ReactDOM.render(appTemplate, appRoot);
+ReactDOM.render(anotherTemplate, appRoot);
+// ReactDOM.render(appTemplate, appRoot);

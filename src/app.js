@@ -16,25 +16,33 @@ var userData = {
 	name: 'Bhaskar',
 	skill: 'JavaScript',
 	location: 'Pune, India'
+};
+
+function getLocation(location){
+	if(location){
+		return location;
+	}else{
+		return 'Unknown';
+	}
 }
 
 var anotherTemplate = (
 	<div>
 	<h1>Name - {userData.name.toUpperCase() + '!'}</h1>
 	<p>Skill - {userData.skill}</p>
-	<p>Location - {userData.location}</p>
+	<p>Location - {getLocation(userData.location)}</p>
 	</div>
 	);
 
 var appTemplate = (
 	<div>
-		<h1>{app.title}</h1>
-		<p>{app.subTitle}</p>
+	<h1>{app.title}</h1>
+	<p>{app.subTitle}</p>
 	</div>
 	);
 
 var appRoot = document.getElementById('app');
 
 // ReactDOM.render(template, appRoot);
-// ReactDOM.render(anotherTemplate, appRoot);
-ReactDOM.render(appTemplate, appRoot);
+ReactDOM.render(anotherTemplate, appRoot);
+// ReactDOM.render(appTemplate, appRoot);
