@@ -28,9 +28,12 @@ var userData = {
 
 function getLocation(location) {
 	if (location) {
-		return location;
-	} else {
-		return 'Unknown';
+		return React.createElement(
+			'p',
+			null,
+			'Location - ',
+			location
+		);
 	}
 }
 
@@ -49,12 +52,7 @@ var anotherTemplate = React.createElement(
 		'Skill - ',
 		userData.skill
 	),
-	React.createElement(
-		'p',
-		null,
-		'Location - ',
-		getLocation(userData.location)
-	)
+	getLocation(userData.location)
 );
 
 var appTemplate = React.createElement(

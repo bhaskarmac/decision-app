@@ -20,9 +20,7 @@ var userData = {
 
 function getLocation(location){
 	if(location){
-		return location;
-	}else{
-		return 'Unknown';
+		return <p>Location - {location}</p>;
 	}
 }
 
@@ -30,7 +28,7 @@ var anotherTemplate = (
 	<div>
 	<h1>Name - {userData.name.toUpperCase() + '!'}</h1>
 	<p>Skill - {userData.skill}</p>
-	<p>Location - {getLocation(userData.location)}</p>
+	{getLocation(userData.location)}
 	</div>
 	);
 
