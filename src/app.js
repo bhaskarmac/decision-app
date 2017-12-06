@@ -26,7 +26,7 @@ function getLocation(location){
 
 var anotherTemplate = (
 	<div>
-	<h1>Name - {userData.name.toUpperCase() + '!'}</h1>
+	<h1>{userData.name ? userData.name : 'Anonymous'}</h1>
 	<p>Skill - {userData.skill}</p>
 	{getLocation(userData.location)}
 	</div>

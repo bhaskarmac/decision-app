@@ -43,8 +43,7 @@ var anotherTemplate = React.createElement(
 	React.createElement(
 		'h1',
 		null,
-		'Name - ',
-		userData.name.toUpperCase() + '!'
+		userData.name ? userData.name : 'Anonymous'
 	),
 	React.createElement(
 		'p',
