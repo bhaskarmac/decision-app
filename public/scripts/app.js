@@ -22,7 +22,7 @@ var template = React.createElement(
 
 var userData = {
 	name: 'Bhaskar',
-	skill: 'JavaScript',
+	age: 25,
 	location: 'Pune, India'
 };
 
@@ -45,11 +45,11 @@ var anotherTemplate = React.createElement(
 		null,
 		userData.name ? userData.name : 'Anonymous'
 	),
-	React.createElement(
+	userData.age && userData.age >= 18 && React.createElement(
 		'p',
 		null,
-		'Skill - ',
-		userData.skill
+		' Age - ',
+		userData.age
 	),
 	getLocation(userData.location)
 );
