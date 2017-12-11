@@ -1,14 +1,24 @@
 'use strict';
 
 console.log('app.js is running');
+
+
 var app = {
 	title: 'Decision App',
-	subTitle: 'This is deicision app.'
-}
+	subTitle: 'This is deicision app.',
+	options: ['one', 'two']
+};
+
+
 var template = (
 	<div> 
-	<h1>Decision App</h1>
-	<p>This is some info</p>
+	<h1>{app.title}</h1>
+	{app.subTitle && <p>app.subTitle</p>}
+	<p>{app.options.length > 0 ? 'Here are your options' : 'No options'}</p>
+		<ol>
+		<li>One</li>
+		<li>Two</li>
+	</ol>
 	</div>
 	);
 
@@ -41,6 +51,6 @@ var appTemplate = (
 
 var appRoot = document.getElementById('app');
 
-// ReactDOM.render(template, appRoot);
-ReactDOM.render(anotherTemplate, appRoot);
+ReactDOM.render(template, appRoot);
+// ReactDOM.render(anotherTemplate, appRoot);
 // ReactDOM.render(appTemplate, appRoot);
