@@ -3,14 +3,14 @@
 console.log('app.js is running');
 
 
-var app = {
+const app = {
 	title: 'Decision App',
 	subTitle: 'This is deicision app.',
 	options: ['one', 'two']
 };
 
 
-var template = (
+const template = (
 	<div> 
 	<h1>{app.title}</h1>
 	{app.subTitle && <p>app.subTitle</p>}
@@ -22,7 +22,7 @@ var template = (
 	</div>
 	);
 
-var userData = {
+const userData = {
 	name: 'Bhaskar',
 	age: 25,
 	location: 'Pune, India'
@@ -34,7 +34,7 @@ function getLocation(location){
 	}
 }
 
-var anotherTemplate = (
+const anotherTemplate = (
 	<div>
 	<h1>{userData.name ? userData.name : 'Anonymous'}</h1>
 	{(userData.age && userData.age >= 18) && <p> Age - {userData.age}</p>}
@@ -42,14 +42,14 @@ var anotherTemplate = (
 	</div>
 	);
 
-var appTemplate = (
+const appTemplate = (
 	<div>
 	<h1>{app.title}</h1>
 	<p>{app.subTitle}</p>
 	</div>
 	);
 
-var appRoot = document.getElementById('app');
+const appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
 // ReactDOM.render(anotherTemplate, appRoot);
